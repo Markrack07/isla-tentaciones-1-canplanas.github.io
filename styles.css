@@ -1,0 +1,240 @@
+/* Reinicia los estilos predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    background: url('f.elconfidencial.com_original_ca1_71c_9d2_ca171c9d24851ed2fdb3f69f3d4ad02a.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Encabezado (aparece destacado con imagen y color vibrante) */
+header {
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid rgba(255, 99, 71, 0.6); /* Color similar al de los temas cálidos del programa */
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Filtro oscuro sobre imagen */
+    z-index: 1;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    z-index: 2;
+}
+
+p {
+    font-size: 1.4rem;
+    z-index: 2;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 30px;
+    z-index: 2;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+/* Estilo del menú lateral */
+.menuLateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2c3e50;  /* Azul oscuro */
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menuLateral a {
+    color: #ecf0f1; /* Gris claro */
+    font-size: 1.3rem;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #34495e;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.menuLateral a:hover {
+    background-color: #e74c3c; /* Resaltar con rojo */
+    padding-left: 30px;
+}
+
+/* Submenú de episodios */
+.subMenu {
+    padding-left: 20px;
+    display: none;
+}
+
+.menuLateral a:hover + .subMenu {
+    display: block;
+}
+
+.subMenu a {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #ecf0f1;
+}
+
+.subMenu a:hover {
+    background-color: #95a5a6;
+}
+
+/* Botón para abrir el menú lateral */
+.btnMenu {
+    font-size: 30px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1100;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.btnMenu:hover {
+    background-color: #34495e;
+}
+
+/* Botón para cerrar el menú lateral */
+.btnCerrar {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    font-size: 25px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.btnCerrar:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo de los capítulos (transparente) */
+section {
+    background-color: rgba(255, 255, 255, 0.85); /* Blanco con transparencia */
+    margin: 40px auto;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    transition: all 0.3s ease;
+    margin-bottom: 50px;
+    border-left: 10px solid rgb(9, 185, 62); /* Resalta los capítulos con un borde vibrante */
+}
+
+/* Efecto al pasar el ratón */
+section:hover {
+    transform: scale(1.03); /* Efecto de ampliación */
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 80px;
+}
+
+/* Adaptación de estilos a pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 60px 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px 20px;
+    }
+}
+
+.temporada {
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-left: 40px;
+}
+
