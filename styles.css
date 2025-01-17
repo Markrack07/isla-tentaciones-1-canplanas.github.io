@@ -183,7 +183,7 @@ section:hover {
     transform: scale(1.03); /* Efecto de ampliación */
 }
 
-h2 {
+.ep {
     font-size: 2.5rem;
     font-weight: 600;
     color: #ff6347;
