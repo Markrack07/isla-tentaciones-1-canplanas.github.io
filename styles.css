@@ -238,3 +238,16 @@ footer {
     margin-left: 40px;
 }
 
+.proximamente {
+    text-align: center;
+    background-color: red;
+    color: withe;
+}
+
+.temp {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 25px;
+}
